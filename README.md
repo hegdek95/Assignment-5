@@ -156,5 +156,27 @@ print(myString.index('s'))
 k = 'Hello hi my name is karthik'.split()
 print (k)
 
-#18
+# 18 Write a Python program to swap comma and dot in a string.
+amount = "32.054,23"
+maketrans = amount.maketrans
+amount = amount.translate(maketrans(',.', '.,'))
+print(amount)
+
+# 19 Write a Python program to find smallest and largest word in a given string.
+from collections import Counter
+
+line = 'Hello, welcome to python programming '
+c = Counter({word: len(word) for word in line.split()})
+
+print(c.most_common(1)[0])  # ('programming', 11)
+print(c.most_common()[-1])  # ('to', 2)
+
+# 20 Write a Python program to remove all consecutive duplicates of a given string.
+string="kartikeyavasanthegde"
+p=""
+for char in string:
+	if char not in p:
+		p=p+char
+print(p)
+
 
