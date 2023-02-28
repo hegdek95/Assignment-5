@@ -102,5 +102,59 @@ items = input("red, black, pink, green")
 words = [word for word in items.split(",")]
 print(",".join(sorted(list(set(words)))))
 
-# 11
+# 11 Write a Python function to reverses a string if it's length is a multiple of 4.
+def reverse_string(str1):
+    if len(str1) % 4 == 0:
+       return ''.join(reversed(str1))
+    return str1
+
+print(reverse_string('abcd'))
+print(reverse_string('python'))
+
+# 12 Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
+def to_uppercase(str1):
+    num_upper = 0
+    for letter in str1[:4]: 
+        if letter.upper() == letter:
+            num_upper += 1
+    if num_upper >= 2:
+        return str1.upper()
+    return str1
+
+print(to_uppercase('Python'))
+print(to_uppercase('PyThon'))
+
+# 13 Write a Python program to check whether a string starts with specified characters.
+string = "Hello world"
+print(string.startswith("Hello"))
+  # output : True
+
+# 14 \ Write a Python program to print the following floating numbers upto 2 decimal places 3.1415926
+x = 3.1415926
+y = 12.9999
+print("\nOriginal Number: ", x)
+print("Formatted Number: "+"{:.2f}".format(x));
+print("Original Number: ", y)
+print("Formatted Number: "+"{:.2f}".format(y));
+print() 
+
+# 15  Write a Python program to count repeated characters in a string.
+import collections
+str1 = 'thequickbrownfoxjumpsoverthelazydog'
+d = collections.defaultdict(int)
+for c in str1:
+    d[c] += 1
+for c in sorted(d, key=d.get, reverse=True):
+  if d[c] > 1:
+      print('%s %d' % (c, d[c]))
+
+# 16 Write a Python program to print the index of the character in a string
+myString = 'Position of a character'
+print(myString.index('s'))
+
+# 17 Write a Python program to convert a string in a list.
+k = 'Hello hi my name is karthik'.split()
+print (k)
+
+#18
 
